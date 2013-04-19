@@ -8,11 +8,17 @@ Password protect an arbitrary public facing page or URL without involving either
 Usage
 -----
 
-Specify credentials statically:
+Specify a single username and password:
 
-    {exp:authentic username='hearst' password='rosebud' realm='Confidential'}
+    {exp:authentic username='hello' password='world' realm='Keep Out!'}
 
-Or dynamically, for example, from channel-derived data:
+Or, specify multiple usernames and passwords separated by `|`:
+
+    {exp:authentic username='karl|groucho' password='marx|marx' realm='Marx Bros ONLY'}
+
+Obviously, there must be a password for each username, and the usernames and passwords themselves may not contain a `|`.
+
+Finally, the parameters may be set dynamically, eg, from channel-derived data:
 
     {exp:channel:entries channel='channel'}
 
@@ -20,19 +26,7 @@ Or dynamically, for example, from channel-derived data:
 
     {/exp:channel:entries}
 
-Nonexistent or invalid credentials results in a standard HTTP 401 Unauthorized error.
-
-Caveat
-------
-
-Do not use the following as username or password:
-
-* n
-* off
-* on
-* y
-
-[EE automatically converts these, respectively to 'no' and 'yes'](http://expressionengine.com/user_guide/development/usage/template.html).
+Nonexistent or invalid credentials result in a standard HTTP 401 Unauthorized error.
 
 Fine Print
 ----------
