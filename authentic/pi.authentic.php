@@ -53,7 +53,7 @@ class Authentic {
     }
 
     /**
-     * Return true if PHP_AUTH_* server varibles exist
+     * Return true if PHP_AUTH_* server variables exist
      *
      * @return bool
      */
