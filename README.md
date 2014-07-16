@@ -26,7 +26,7 @@ Finally, the parameters may be set dynamically, eg, from channel-derived data:
 
     {/exp:channel:entries}
 
-Nonexistent or invalid credentials result in a standard HTTP 401 Unauthorized error.
+Nonexistent or invalid credentials result in a standard `HTTP 401 Unauthorized` error.
 
 Fine Print
 ----------
