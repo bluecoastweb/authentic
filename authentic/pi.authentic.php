@@ -36,7 +36,7 @@ class Authentic {
      * @param string -- the security "realm" displayed in the 401 pop-up
      */
     public static function challenge($realm) {
-        header("WWW-Authenticate: Basic realm='$realm'");
+        header("WWW-Authenticate: Basic realm=\"{$realm}\"");
         header('HTTP/1.0 401 Unauthorized');
         exit('Authentication is required to view this page.');
     }
